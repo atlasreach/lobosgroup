@@ -604,10 +604,10 @@ export default function ShortTermRentalsPage() {
         <div className="max-w-3xl mx-auto">
           <Accordion type="multiple">
             <AccordionItem value="item-1">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-1">
                 How quickly can you turn over a property?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-1">
                 Most turnovers are completed within 2-4 hours depending on property size. We can accommodate
                 same-day bookings and tight turnaround times. For back-to-back bookings, we coordinate with
                 your checkout/check-in schedule.
@@ -615,30 +615,30 @@ export default function ShortTermRentalsPage() {
             </AccordionItem>
 
             <AccordionItem value="item-2">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-2">
                 Do you provide linens and towels?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-2">
                 We can work with your existing linens or provide linen service as an add-on. Many hosts prefer
                 our laundry service where we wash, dry, and return fresh linens for each turnover.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-3">
                 How do you handle key access?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-3">
                 We work with lockboxes, smart locks, or key exchanges—whatever system you prefer. We maintain
                 strict security protocols and can integrate with your property management software.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-4">
                 What if guests leave the property damaged or extra messy?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-4">
                 We document everything with photos and notify you immediately of any damage or excessive mess.
                 Additional cleaning beyond normal turnover is billed separately, and we provide detailed reports
                 for your records.
@@ -646,30 +646,30 @@ export default function ShortTermRentalsPage() {
             </AccordionItem>
 
             <AccordionItem value="item-5">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-5">
                 Can you restock supplies during turnover?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-5">
                 Yes! We can restock toiletries, coffee, paper products, and other amenities. Just provide us
                 with your inventory list and we'll keep everything stocked and ready for guests.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-6">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-6">
                 Do you offer deep cleaning between regular turnovers?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-6">
                 Absolutely. We recommend periodic deep cleanings (monthly or quarterly) in addition to regular
                 turnovers to maintain your property's condition and prevent wear and tear.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-7">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-7">
                 How do I schedule cleanings?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-7">
                 We can sync with your Airbnb/VRBO calendar, work through your property management system, or
                 accept direct bookings via phone, text, or email. We make scheduling as easy as possible.
               </AccordionContent>

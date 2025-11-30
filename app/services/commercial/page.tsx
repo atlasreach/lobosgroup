@@ -456,10 +456,10 @@ export default function CommercialCleaningPage() {
         <div className="max-w-3xl mx-auto">
           <Accordion type="multiple">
             <AccordionItem value="item-1">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-1">
                 What types of businesses do you service?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-1">
                 We service a wide range of commercial properties including offices, retail stores, restaurants,
                 medical offices, gyms, salons, and property management facilities. If you have a commercial space,
                 we can likely help!
@@ -467,40 +467,40 @@ export default function CommercialCleaningPage() {
             </AccordionItem>
 
             <AccordionItem value="item-2">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-2">
                 Can you work around our business hours?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-2">
                 Absolutely! We offer flexible scheduling including after-hours cleaning, early morning services,
                 and weekend appointments. We work around your schedule to minimize disruption to your business.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-3">
                 Are you insured and bonded?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-3">
                 Yes, Lobos Group is fully insured and bonded. We carry comprehensive liability insurance to protect
                 your business, and all our staff members undergo background checks.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-4">
                 Do you provide your own cleaning supplies and equipment?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-4">
                 Yes, we bring all necessary cleaning supplies and professional equipment. If you have specific
                 products or green cleaning requirements, we're happy to accommodate those preferences.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-5">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-5">
                 How do you ensure quality and consistency?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-5">
                 We use detailed cleaning checklists, conduct regular quality inspections, and maintain open
                 communication with our clients. Your dedicated account manager will ensure your facility consistently
                 meets your standards.
@@ -508,10 +508,10 @@ export default function CommercialCleaningPage() {
             </AccordionItem>
 
             <AccordionItem value="item-6">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-6">
                 What if we need additional services outside our regular schedule?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-6">
                 We're flexible! If you need emergency cleaning, post-event cleanup, or one-time deep cleaning services,
                 just reach out and we'll accommodate your needs as quickly as possible.
               </AccordionContent>

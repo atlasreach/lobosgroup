@@ -471,10 +471,10 @@ export default function OrganizationServicesPage() {
         <div className="max-w-3xl mx-auto">
           <Accordion type="multiple">
             <AccordionItem value="item-1">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-1">
                 How long does an organization project take?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-1">
                 Project length varies based on the space size and clutter level. A single closet might take
                 3-4 hours, while a whole home could take multiple days. We'll provide an estimate during
                 your consultation.
@@ -482,50 +482,50 @@ export default function OrganizationServicesPage() {
             </AccordionItem>
 
             <AccordionItem value="item-2">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-2">
                 Do I need to buy organizing products before you come?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-2">
                 No! We assess your space first, then recommend specific products that will work best.
                 We can shop for these items or provide you with a shopping list if you prefer.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-3">
                 Will you help me decide what to keep and what to donate?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-3">
                 Absolutely. We guide you through the decluttering process with proven techniques, but
                 you always make the final decisions about your belongings. We're here to support, not judge.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-4">
                 What happens to items I want to donate?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-4">
                 We can coordinate donation drop-offs to local charities as part of our service. We'll
                 handle the transport so you don't have to worry about it.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-5">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-5">
                 Can you help maintain organization after the initial setup?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-5">
                 Yes! We offer maintenance sessions to help you stay organized. Many clients schedule
                 quarterly or seasonal tune-ups to keep their systems running smoothly.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-6">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-6">
                 Do you work with people who have difficulty letting go of items?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-6">
                 We work with clients of all backgrounds and comfort levels. Our approach is patient,
                 compassionate, and non-judgmental. We move at your pace and respect your emotional
                 attachments to items.

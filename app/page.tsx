@@ -22,70 +22,20 @@ import {
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
-      <div className="relative">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80&fit=crop"
-            alt="Clean modern living room"
-            fill
-            className="object-cover brightness-50"
-            priority
-          />
-        </div>
-        <Section className="py-20 md:py-32 relative z-10">
-          <div className="text-center space-y-6 max-w-3xl mx-auto px-4">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white">
-              Professional Cleaning Services for New Orleans Homes & Businesses
-            </h1>
-            <p className="text-xl text-gray-200">
-              From deep cleaning and organization to commercial services and rental turnovers, Lobos Group delivers exceptional results you can count on. Locally owned, fully insured, and dedicated to your satisfaction.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/book">
-                <Button size="lg" className="w-full sm:w-auto text-lg px-8">
-                  Get Free Quote
-                </Button>
-              </Link>
-              <a href="tel:504-447-4392">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20 text-lg px-8">
-                  Call (504) 447-4392
-                </Button>
-              </a>
-              <Link href="/services">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20">
-                  View Services
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </Section>
-      </div>
-
       {/* Core Services - Four Main Categories */}
-      <Section background="muted">
+      <Section background="muted" className="py-20">
         <FadeIn>
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">Our Core Services</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Professional cleaning and organization solutions tailored to your needs in New Orleans
+          <div className="text-center space-y-4 mb-16 px-4">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+              Lobos Group
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+              Expert cleaning and organization services for homes and businesses in New Orleans
             </p>
           </div>
         </FadeIn>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-md md:max-w-none mx-auto">
           <FadeIn delay={0.1}>
-            <EnhancedServiceCard
-              icon={LayoutGrid}
-              title="Organization Services"
-              subtitle="Any and Every Space"
-              description="Transform your home with customized organization for kitchens, closets, bathrooms, pantries, and more."
-              href="/services/organization"
-              imageSrc="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80"
-              videoSrc="/residential-cleaning.mp4"
-              featured
-            />
-          </FadeIn>
-          <FadeIn delay={0.2}>
             <EnhancedServiceCard
               icon={HomeIcon}
               title="Residential Cleaning"
@@ -94,6 +44,18 @@ export default function Home() {
               href="/services/residential"
               imageSrc="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80"
               videoSrc="/closet-organizing.mp4"
+              featured
+            />
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <EnhancedServiceCard
+              icon={LayoutGrid}
+              title="Organization Services"
+              subtitle="Any and Every Space"
+              description="Transform your home with customized organization for kitchens, closets, bathrooms, pantries, and more."
+              href="/services/organization"
+              imageSrc="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80"
+              videoSrc="/residential-cleaning.mp4"
             />
           </FadeIn>
           <FadeIn delay={0.3}>
@@ -104,7 +66,7 @@ export default function Home() {
               description="Keep your workplace pristine with our reliable commercial cleaning and maintenance services."
               href="/services/commercial"
               imageSrc="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
-              videoSrc="/commercial-cleaning.mp4"
+              videoSrc="/short-term-rental.mp4"
             />
           </FadeIn>
           <FadeIn delay={0.4}>
@@ -115,7 +77,7 @@ export default function Home() {
               description="Professional turnover cleaning and property management for vacation rentals and Airbnb hosts."
               href="/services/short-term-rentals"
               imageSrc="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80"
-              videoSrc="/short-term-rental.mp4"
+              videoSrc="/commercial-cleaning.mp4"
             />
           </FadeIn>
         </div>

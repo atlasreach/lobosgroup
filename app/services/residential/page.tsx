@@ -413,10 +413,10 @@ export default function ResidentialCleaningPage() {
         <div className="max-w-3xl mx-auto px-4">
           <Accordion type="multiple">
             <AccordionItem value="item-1">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-1">
                 How long does a residential cleaning take?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-1">
                 Cleaning time varies based on your home size and service type. A typical deep clean takes 3-6 hours,
                 while regular maintenance cleanings take 2-4 hours. We'll provide a more specific estimate after
                 reviewing your booking details.
@@ -424,30 +424,30 @@ export default function ResidentialCleaningPage() {
             </AccordionItem>
 
             <AccordionItem value="item-2">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-2">
                 Do I need to be home during the cleaning?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-2">
                 Not necessarily. Many clients provide us with access and leave for the day. We're happy to work
                 around your schedule and can discuss the best arrangement during booking.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-3">
                 Do you bring your own cleaning supplies?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-3">
                 Yes! We bring all necessary cleaning supplies and equipment. If you have specific products you'd
                 like us to use or any allergies we should be aware of, just let us know.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-4">
                 What's the difference between deep cleaning and regular maintenance?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-4">
                 Deep cleaning is more thorough and time-intensive, covering areas like baseboards, inside appliances,
                 light fixtures, and window tracks. Regular maintenance cleaning focuses on keeping an already-clean
                 home tidy with routine surface cleaning, vacuuming, and mopping.
@@ -455,20 +455,20 @@ export default function ResidentialCleaningPage() {
             </AccordionItem>
 
             <AccordionItem value="item-5">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-5">
                 Do you offer recurring cleaning services?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-5">
                 Absolutely! We offer weekly, bi-weekly, and monthly recurring cleaning services. Recurring clients
                 often receive priority scheduling and discounted rates. Contact us to discuss a custom plan.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-6">
-              <AccordionTrigger>
+              <AccordionTrigger value="item-6">
                 What areas do you serve?
               </AccordionTrigger>
-              <AccordionContent>
+              <AccordionContent value="item-6">
                 We serve the Greater New Orleans area within 30 miles of the French Quarter, including New Orleans,
                 Metairie, Kenner, Gretna, and surrounding communities.
               </AccordionContent>
