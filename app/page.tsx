@@ -43,7 +43,7 @@ export default function Home() {
               description="Thorough deep cleaning services that transform your house into a spotless, welcoming sanctuary."
               href="/services/residential"
               imageSrc="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80"
-              videoSrc="/closet-organizing.mp4"
+              videoSrc="/residential-cleaning.mp4"
               featured
             />
           </FadeIn>
@@ -55,7 +55,7 @@ export default function Home() {
               description="Transform your home with customized organization for kitchens, closets, bathrooms, pantries, and more."
               href="/services/organization"
               imageSrc="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80"
-              videoSrc="/residential-cleaning.mp4"
+              videoSrc="/closet-organizing.mp4"
             />
           </FadeIn>
           <FadeIn delay={0.3}>

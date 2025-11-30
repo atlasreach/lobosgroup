@@ -79,7 +79,7 @@ export default function ShortTermRentalsPage() {
             playsInline
             className="w-full h-full object-cover brightness-50"
           >
-            <source src="/short-term-rental.mp4" type="video/mp4" />
+            <source src="/commercial-cleaning.mp4" type="video/mp4" />
           </video>
         </div>
         <Section className="py-20 md:py-32 relative z-10">

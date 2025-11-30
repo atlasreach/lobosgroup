@@ -83,16 +83,6 @@ const industries = [
 
 const services = [
   {
-    title: "Daily Janitorial Services",
-    items: [
-      "Trash removal and recycling",
-      "Surface cleaning and sanitizing",
-      "Floor sweeping and mopping",
-      "Restroom maintenance",
-      "Break room/kitchen cleaning",
-    ],
-  },
-  {
     title: "Deep Cleaning",
     items: [
       "High and low dusting",
@@ -137,7 +127,7 @@ export default function CommercialCleaningPage() {
             playsInline
             className="w-full h-full object-cover brightness-50"
           >
-            <source src="/commercial-cleaning.mp4" type="video/mp4" />
+            <source src="/short-term-rental.mp4" type="video/mp4" />
           </video>
         </div>
         <Section className="py-20 md:py-32 relative z-10">
