@@ -35,6 +35,15 @@ export default function EnhancedServiceCard({
     const video = videoRef.current;
     if (!video) return;
 
+    // Try to play immediately on mount
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay was prevented, try again on user interaction
+        console.log('Autoplay prevented, waiting for interaction');
+      });
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -47,7 +56,7 @@ export default function EnhancedServiceCard({
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.25 }
     );
 
     observer.observe(video);
