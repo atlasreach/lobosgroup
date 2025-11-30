@@ -77,6 +77,16 @@ export default function EnhancedServiceCard({
                 muted
                 playsInline
                 preload="metadata"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  const video = e.currentTarget;
+                  if (video.paused) {
+                    video.play();
+                  } else {
+                    video.pause();
+                  }
+                }}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               >
                 <source src={videoSrc} type="video/mp4" />
