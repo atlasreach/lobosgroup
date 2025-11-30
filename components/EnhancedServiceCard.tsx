@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 interface EnhancedServiceCardProps {
   icon: LucideIcon;
@@ -28,6 +29,34 @@ export default function EnhancedServiceCard({
   videoSrc,
   featured = false,
 }: EnhancedServiceCardProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {
+              // Autoplay failed, video will need user interaction
+            });
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(video);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <motion.div
       whileHover={{ y: -12, scale: 1.03 }}
@@ -42,10 +71,12 @@ export default function EnhancedServiceCard({
           <div className="relative h-64 overflow-hidden">
             {videoSrc ? (
               <video
+                ref={videoRef}
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               >
                 <source src={videoSrc} type="video/mp4" />
