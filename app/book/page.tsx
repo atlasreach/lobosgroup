@@ -5,7 +5,7 @@ import Section from "@/components/Section";
 
 export default function BookingPage() {
   useEffect(() => {
-    // Load the booking widget script
+    // Load the form embed script
     const script = document.createElement("script");
     script.src = "https://link.msgsndr.com/js/form_embed.js";
     script.type = "text/javascript";
@@ -26,26 +26,36 @@ export default function BookingPage() {
       <Section className="py-12 md:py-20">
         <div className="text-center space-y-4 max-w-3xl mx-auto mb-12">
           <h1 className="text-4xl md:text-5xl font-bold">
-            Book Your Appointment
+            Request a Quote
           </h1>
           <p className="text-xl text-muted-foreground">
-            Schedule your cleaning service using our online booking system below
+            Fill out the form below and a member of our team will reach out to you quickly
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-card rounded-lg border shadow-sm p-6">
             <iframe
-              src="https://api.leadconnectorhq.com/widget/booking/aY6AbaBbjfgcaEVwrfKb"
+              src="https://api.leadconnectorhq.com/widget/form/wsAYIWjdjsclmrbHgTf6"
               style={{
                 width: "100%",
+                height: "1772px",
                 border: "none",
-                overflow: "hidden",
-                minHeight: "600px",
+                borderRadius: "3px"
               }}
-              scrolling="no"
-              id="aY6AbaBbjfgcaEVwrfKb_1764378066526"
-              title="Book Appointment"
+              id="inline-wsAYIWjdjsclmrbHgTf6"
+              data-layout='{"id":"INLINE"}'
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Form 5"
+              data-height="1772"
+              data-layout-iframe-id="inline-wsAYIWjdjsclmrbHgTf6"
+              data-form-id="wsAYIWjdjsclmrbHgTf6"
+              title="Request Quote Form"
             />
           </div>
         </div>

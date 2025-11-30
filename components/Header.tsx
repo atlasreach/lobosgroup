@@ -121,32 +121,32 @@ export default function Header() {
               <div className="absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-xl border-2 border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-3">
                   <Link
-                    href="/services/deep-cleaning"
+                    href="/services/organization"
                     className="block px-5 py-3 hover:bg-primary/5 transition-colors"
                   >
-                    <div className="font-bold text-base">Deep Cleaning</div>
-                    <div className="text-sm text-muted-foreground mt-0.5">Thorough home cleaning</div>
+                    <div className="font-bold text-base">Organization Services</div>
+                    <div className="text-sm text-muted-foreground mt-0.5">Any and every space</div>
                   </Link>
                   <Link
-                    href="/services/closet-organizing"
+                    href="/services/residential"
                     className="block px-5 py-3 hover:bg-primary/5 transition-colors"
                   >
-                    <div className="font-bold text-base">Closet Organizing</div>
-                    <div className="text-sm text-muted-foreground mt-0.5">Declutter & organize</div>
+                    <div className="font-bold text-base">Residential Cleaning</div>
+                    <div className="text-sm text-muted-foreground mt-0.5">Deep clean your home</div>
                   </Link>
                   <Link
-                    href="/services/grocery-shopping"
+                    href="/services/commercial"
                     className="block px-5 py-3 hover:bg-primary/5 transition-colors"
                   >
-                    <div className="font-bold text-base">Grocery Shopping</div>
-                    <div className="text-sm text-muted-foreground mt-0.5">We shop for you</div>
+                    <div className="font-bold text-base">Commercial Cleaning</div>
+                    <div className="text-sm text-muted-foreground mt-0.5">Professional business solutions</div>
                   </Link>
                   <Link
-                    href="/services/new-construction-cleaning"
+                    href="/services/short-term-rentals"
                     className="block px-5 py-3 hover:bg-primary/5 transition-colors"
                   >
-                    <div className="font-bold text-base">New Construction</div>
-                    <div className="text-sm text-muted-foreground mt-0.5">Post-build cleanup</div>
+                    <div className="font-bold text-base">Short-Term Rentals</div>
+                    <div className="text-sm text-muted-foreground mt-0.5">Turnover & property management</div>
                   </Link>
                   <Link
                     href="/services"

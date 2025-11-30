@@ -9,7 +9,7 @@ export default function Footer() {
     const script = document.createElement("script");
     script.src = "https://beta.leadconnectorhq.com/loader.js";
     script.setAttribute("data-resources-url", "https://beta.leadconnectorhq.com/chat-widget/loader.js");
-    script.setAttribute("data-widget-id", "692a40805d98db29bd696509");
+    script.setAttribute("data-widget-id", "692c7250d47c13700786582e");
     document.body.appendChild(script);
 
     return () => {
@@ -74,34 +74,34 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/services/deep-cleaning"
+                  href="/services/organization"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Deep Cleaning
+                  Organization Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/closet-organizing"
+                  href="/services/residential"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Closet Organizing
+                  Residential Cleaning
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/grocery-shopping"
+                  href="/services/commercial"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Grocery Shopping
+                  Commercial Cleaning
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/new-construction-cleaning"
+                  href="/services/short-term-rentals"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  New Construction
+                  Short-Term Rentals
                 </Link>
               </li>
             </ul>
