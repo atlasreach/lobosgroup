@@ -36,21 +36,31 @@ export default function EnhancedServiceCard({
     if (!video) return;
 
     // Try to play immediately on mount
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // Autoplay was prevented, try again on user interaction
-        console.log('Autoplay prevented, waiting for interaction');
+    const attemptPlay = () => {
+      video.play().catch(() => {
+        console.log('Autoplay prevented');
       });
-    }
+    };
+
+    attemptPlay();
+
+    // Also try on first user interaction (for mobile)
+    const playOnInteraction = () => {
+      attemptPlay();
+      document.removeEventListener('touchstart', playOnInteraction);
+      document.removeEventListener('click', playOnInteraction);
+      document.removeEventListener('scroll', playOnInteraction);
+    };
+
+    document.addEventListener('touchstart', playOnInteraction, { once: true });
+    document.addEventListener('click', playOnInteraction, { once: true });
+    document.addEventListener('scroll', playOnInteraction, { once: true });
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            video.play().catch(() => {
-              // Autoplay failed, video will need user interaction
-            });
+            video.play().catch(() => {});
           } else {
             video.pause();
           }
@@ -63,6 +73,9 @@ export default function EnhancedServiceCard({
 
     return () => {
       observer.disconnect();
+      document.removeEventListener('touchstart', playOnInteraction);
+      document.removeEventListener('click', playOnInteraction);
+      document.removeEventListener('scroll', playOnInteraction);
     };
   }, []);
 
