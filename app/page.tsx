@@ -8,6 +8,7 @@ import EnhancedServiceCard from "@/components/EnhancedServiceCard";
 import GoogleMap from "@/components/GoogleMap";
 import FadeIn from "@/components/FadeIn";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import BookingForm from "@/components/BookingForm";
 import {
   LayoutGrid,
   Home as HomeIcon,
@@ -404,6 +405,13 @@ export default function Home() {
           </FadeIn>
         </Section>
       </div>
+
+      {/* Contact Form */}
+      <Section className="py-20">
+        <FadeIn>
+          <BookingForm defaultService="residential" />
+        </FadeIn>
+      </Section>
     </div>
   );
 }

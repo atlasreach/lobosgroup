@@ -75,6 +75,13 @@ export default function Header() {
               >
                 FAQ
               </Link>
+              <Link
+                href="/book"
+                className="text-lg font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
               <div className="flex gap-3 pt-2">
                 <a href="tel:504-447-4392" className="flex-1">
                   <Button size="sm" variant="outline" className="w-full">
@@ -168,6 +175,12 @@ export default function Header() {
               className="transition-all hover:text-primary hover:scale-105 text-foreground"
             >
               FAQ
+            </Link>
+            <Link
+              href="/book"
+              className="transition-all hover:text-primary hover:scale-105 text-foreground"
+            >
+              CONTACT
             </Link>
           </nav>
 

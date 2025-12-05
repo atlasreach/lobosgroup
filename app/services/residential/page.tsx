@@ -21,35 +21,25 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const residentialServices = [
-  {
-    title: "Deep Cleaning",
-    description: "Thorough top-to-bottom cleaning of your entire home including kitchens, bathrooms, baseboards, and all overlooked surfaces. Perfect for homes that need a fresh start or haven't had a professional clean in a while. We tackle the deep dirt and grime that regular cleaning misses.",
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80&fit=crop",
-  },
-  {
-    title: "Regular Maintenance",
-    description: "Keep your home consistently clean with weekly, bi-weekly, or monthly recurring cleaning services. We maintain your home's cleanliness so you can focus on what matters most. Recurring clients receive priority scheduling and special rates.",
-    image: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=800&q=80&fit=crop",
-  },
+const additionalServices = [
   {
     title: "Move-In/Move-Out",
-    description: "Complete cleaning for property transitions including inside cabinets, drawers, and appliances. Ideal for landlords, real estate agents, and homeowners preparing for a move. We ensure the property is spotless for new occupants.",
+    description: "Complete cleaning for property transitions including inside cabinets, drawers, and appliances. Ideal for landlords, real estate agents, and homeowners.",
     image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80&fit=crop",
   },
   {
     title: "Post-Construction",
-    description: "Remove dust, debris, and construction residue after renovations or new builds. We clean every surface, window, and fixture to transform your construction site into a move-in ready home. Our team handles even the toughest post-construction mess.",
+    description: "Remove dust, debris, and construction residue after renovations or new builds. We transform your construction site into a move-in ready home.",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&fit=crop",
   },
   {
     title: "Spring/Seasonal Cleaning",
-    description: "Refresh your home with comprehensive seasonal deep cleaning services. We tackle areas that accumulate dust and grime throughout the year including windows, fans, vents, and hard-to-reach places. Perfect for preparing your home for the changing seasons.",
+    description: "Comprehensive seasonal deep cleaning including windows, fans, vents, and hard-to-reach places. Perfect for preparing your home for the changing seasons.",
     image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&q=80&fit=crop",
   },
   {
     title: "Vacation Home Prep",
-    description: "Get your second home ready for your arrival with thorough cleaning and preparation services. We ensure your vacation property is fresh, clean, and welcoming when you arrive. Perfect for seasonal homeowners who want their property guest-ready.",
+    description: "Get your second home ready for your arrival. We ensure your vacation property is fresh, clean, and welcoming when you arrive.",
     image: "https://images.unsplash.com/photo-1502672260066-6bc86a0ae76c?w=800&q=80&fit=crop",
   },
 ];
@@ -94,21 +84,188 @@ export default function ResidentialCleaningPage() {
         </Section>
       </div>
 
-      {/* Our Residential Services */}
+      {/* Deep Cleaning Section */}
+      <Section background="muted">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <FadeIn>
+              <div className="space-y-6">
+                <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
+                  <span className="text-primary font-semibold">Our Signature Service</span>
+                </div>
+                <h2 className="text-3xl md:text-5xl font-bold">Deep Cleaning</h2>
+                <p className="text-lg text-muted-foreground">
+                  The thorough, top-to-bottom clean your home deserves. Perfect for first-time clients,
+                  homes that haven't had professional cleaning in a while, or when you need a fresh start.
+                </p>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">What's Included:</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Deep scrub of inside refrigerator and oven</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Thorough cleaning of all bathrooms including grout scrubbing</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Scrubbing baseboards, window sills, and door frames throughout</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Dusting and cleaning ceiling fans, light fixtures, and air vents</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Detailed kitchen cleaning including cabinet fronts and all appliances</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Interior window cleaning and track detailing</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Deep vacuuming and mopping of all floors and hard-to-reach areas</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/pricing">
+                    <Button size="lg">View Pricing</Button>
+                  </Link>
+                  <Link href="/book?service=residential&type=deep">
+                    <Button size="lg" variant="outline">Book Deep Cleaning</Button>
+                  </Link>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80&fit=crop"
+                  alt="Deep Cleaning Service"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </Section>
+
+      {/* Regular Maintenance Section */}
+      <Section>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <FadeIn>
+              <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=800&q=80&fit=crop"
+                  alt="Regular Maintenance Cleaning"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <div className="space-y-6">
+                <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
+                  <span className="text-primary font-semibold">Keep It Clean</span>
+                </div>
+                <h2 className="text-3xl md:text-5xl font-bold">Regular Maintenance</h2>
+                <p className="text-lg text-muted-foreground">
+                  Maintain your home's cleanliness with recurring service. After your initial deep clean,
+                  we keep your home consistently spotless with regular maintenance visits.
+                </p>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">What's Included:</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Kitchen countertops, sinks, and appliance exterior cleaning</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Bathroom cleaning, scrubbing toilets, showers, and sinks</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Dusting all surfaces, furniture, and accessible areas</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Vacuuming carpets and rugs, mopping hard floors</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                      <span>Taking out trash and replacing liners</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">Service Options:</h3>
+                  <div className="grid grid-cols-1 gap-3">
+                    <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
+                      <Clock className="w-6 h-6 text-primary" />
+                      <div>
+                        <div className="font-semibold">Weekly</div>
+                        <div className="text-sm text-muted-foreground">Best for busy families & high-traffic homes</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
+                      <Clock className="w-6 h-6 text-primary" />
+                      <div>
+                        <div className="font-semibold">Every 2 Weeks</div>
+                        <div className="text-sm text-muted-foreground">Most popular option</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 p-4 bg-muted rounded-lg">
+                      <Clock className="w-6 h-6 text-primary" />
+                      <div>
+                        <div className="font-semibold">Monthly</div>
+                        <div className="text-sm text-muted-foreground">Perfect for smaller homes or light maintenance</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/pricing">
+                    <Button size="lg">View Pricing</Button>
+                  </Link>
+                  <Link href="/book?service=residential&type=regular">
+                    <Button size="lg" variant="outline">Book Regular Service</Button>
+                  </Link>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </Section>
+
+      {/* Additional Services */}
       <Section background="muted">
         <FadeIn>
-          <div className="text-center space-y-4 mb-16 px-4">
-            <h2 className="text-3xl md:text-4xl font-bold">Our Residential Services</h2>
+          <div className="text-center space-y-4 mb-12 px-4">
+            <h2 className="text-3xl md:text-4xl font-bold">Additional Services</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive cleaning solutions tailored to your home's unique needs
+              Specialized cleaning for unique situations
             </p>
           </div>
         </FadeIn>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-          {residentialServices.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+          {additionalServices.map((service, index) => (
             <FadeIn key={service.title} delay={index * 0.1}>
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group h-full">
-                <div className="relative h-48">
+                <div className="relative h-40">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -116,16 +273,21 @@ export default function ResidentialCleaningPage() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 className="text-lg font-bold text-white">{service.title}</h3>
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <p className="text-muted-foreground">{service.description}</p>
+                <CardContent className="p-4">
+                  <p className="text-sm text-muted-foreground">{service.description}</p>
                 </CardContent>
               </Card>
             </FadeIn>
           ))}
+        </div>
+        <div className="text-center mt-8">
+          <Link href="/book">
+            <Button size="lg" variant="outline">Request Custom Quote</Button>
+          </Link>
         </div>
       </Section>
 
@@ -486,21 +648,21 @@ export default function ResidentialCleaningPage() {
       <Section>
         <FadeIn>
           <div className="text-center space-y-6 max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold">Custom Pricing for Every Home</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Transparent Pricing</h2>
             <p className="text-lg text-muted-foreground">
-              Every home is unique, and so are your cleaning needs. We provide personalized quotes
-              based on your home's size, condition, and the services you need.
+              View our straightforward pricing based on your home's square footage.
+              Choose from deep cleaning or regular maintenance packages.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/book?service=residential">
+              <Link href="/pricing">
                 <Button size="lg" className="text-lg px-8 w-full sm:w-auto">
-                  Request Your Free Quote
+                  View Pricing
                 </Button>
               </Link>
               <a href="tel:504-447-4392">
                 <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call for Quote
+                  (504) 447-4392
                 </Button>
               </a>
             </div>
