@@ -145,7 +145,7 @@ export default function EnhancedServiceCard({
             </p>
             <Button
               variant={featured ? "default" : "outline"}
-              className="w-full group-hover:bg-primary group-hover:text-white transition-all"
+              className="w-full group-hover:bg-red-500 group-hover:text-white transition-all"
             >
               Learn More →
             </Button>

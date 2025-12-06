@@ -83,7 +83,7 @@ export default function BookingForm({ defaultService = "residential" }: BookingF
           property square footage, and the services you're interested in.
         </p>
         <a href="tel:504-447-4392">
-          <Button className="bg-black hover:bg-black/90 text-white px-6 py-4 text-base">
+          <Button className="bg-red-500 hover:bg-red-600 text-white px-6 py-4 text-base">
             <Phone className="w-4 h-4 mr-2" />
             CALL US NOW
           </Button>
@@ -290,7 +290,7 @@ export default function BookingForm({ defaultService = "residential" }: BookingF
           <Button
             type="submit"
             size="lg"
-            className="w-full bg-black hover:bg-black/90 text-white h-14 text-lg font-semibold"
+            className="w-full bg-red-500 hover:bg-red-600 text-white h-14 text-lg font-semibold"
           >
             SUBMIT REQUEST
           </Button>

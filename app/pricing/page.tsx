@@ -37,7 +37,7 @@ export default function PricingPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <FadeIn>
               <Card className="h-full">
-                <CardHeader className="bg-primary/5">
+                <CardHeader className="bg-red-500">
                   <CardTitle className="text-2xl">Deep Cleaning</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6 space-y-3">
@@ -64,11 +64,11 @@ export default function PricingPage() {
                   <CardTitle className="text-2xl">Regular Cleaning</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6 space-y-3">
-                  <p className="text-red-500 mb-4">
+                  <p className="text-black mb-4">
                     Ongoing maintenance to keep your home consistently clean. Available weekly, every 2 weeks, or monthly.
                   </p>
-                  <h4 className="font-semibold text-sm uppercase text-red-500">Includes:</h4>
-                  <ul className="space-y-2 text-sm text-red-500">
+                  <h4 className="font-semibold text-sm uppercase text-black">Includes:</h4>
+                  <ul className="space-y-2 text-sm text-black">
                     <li>• Kitchen countertops, sinks, and appliance exteriors</li>
                     <li>• Bathroom cleaning - toilets, showers, sinks</li>
                     <li>• Dusting all surfaces and furniture</li>
@@ -99,7 +99,7 @@ export default function PricingPage() {
             <div className="hidden md:block overflow-x-auto">
               <table className="w-full border-collapse bg-white rounded-lg overflow-hidden shadow-lg">
                 <thead>
-                  <tr className="bg-primary text-white">
+                  <tr className="bg-red-500 text-white">
                     <th className="p-4 text-left font-semibold">Home Size</th>
                     <th className="p-4 text-center font-semibold">Deep Cleaning</th>
                     <th className="p-4 text-center font-semibold">Weekly</th>
@@ -110,8 +110,8 @@ export default function PricingPage() {
                 <tbody>
                   {pricingData.map((row, index) => (
                     <tr key={row.sqft} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                      <td className="p-4 font-semibold">{row.sqft}</td>
-                      <td className="p-4 text-center text-lg font-bold text-primary">{row.deep}</td>
+                      <td className="p-4 font-semibold text-black">{row.sqft}</td>
+                      <td className="p-4 text-center text-lg font-bold text-black">{row.deep}</td>
                       <td className="p-4 text-center text-lg">{row.weekly}</td>
                       <td className="p-4 text-center text-lg">{row.biweekly}</td>
                       <td className="p-4 text-center text-lg">{row.monthly}</td>
@@ -127,13 +127,13 @@ export default function PricingPage() {
             {pricingData.map((row, index) => (
               <FadeIn key={row.sqft} delay={index * 0.1}>
                 <Card>
-                  <CardHeader className="bg-primary text-white">
+                  <CardHeader className="bg-red-500 text-white">
                     <CardTitle className="text-xl">{row.sqft}</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 space-y-3">
                     <div className="flex justify-between items-center pb-3 border-b">
                       <span className="font-semibold">Deep Cleaning</span>
-                      <span className="text-xl font-bold text-primary">{row.deep}</span>
+                      <span className="text-xl font-bold text-black">{row.deep}</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span>Weekly</span>
