@@ -60,15 +60,15 @@ export default function PricingPage() {
 
             <FadeIn delay={0.1}>
               <Card className="h-full">
-                <CardHeader className="bg-primary/5">
+                <CardHeader className="bg-red-500">
                   <CardTitle className="text-2xl">Regular Cleaning</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6 space-y-3">
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-red-500 mb-4">
                     Ongoing maintenance to keep your home consistently clean. Available weekly, every 2 weeks, or monthly.
                   </p>
-                  <h4 className="font-semibold text-sm uppercase text-muted-foreground">Includes:</h4>
-                  <ul className="space-y-2 text-sm">
+                  <h4 className="font-semibold text-sm uppercase text-red-500">Includes:</h4>
+                  <ul className="space-y-2 text-sm text-red-500">
                     <li>• Kitchen countertops, sinks, and appliance exteriors</li>
                     <li>• Bathroom cleaning - toilets, showers, sinks</li>
                     <li>• Dusting all surfaces and furniture</li>
