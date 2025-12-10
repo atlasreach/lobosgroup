@@ -52,11 +52,48 @@ export default function BookingForm({ defaultService = "residential" }: BookingF
     }
   }, [serviceCategory]);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement form submission (GoHighLevel API or other)
-    console.log("Form submitted:", { ...formData, serviceCategory });
-    alert("Thank you! We'll contact you shortly.");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/booking", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...formData, serviceCategory }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert("Thank you! We've received your request and will contact you shortly.");
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          address: "",
+          serviceType: "",
+          squareFootage: "",
+          entireProperty: "yes",
+          frequency: "",
+          additionalDetails: "",
+          consentTexts: false,
+          acceptTerms: false,
+        });
+      } else {
+        alert("Something went wrong. Please try calling us directly.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try calling us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -291,8 +328,9 @@ export default function BookingForm({ defaultService = "residential" }: BookingF
             type="submit"
             size="lg"
             className="w-full bg-red-500 hover:bg-red-600 text-white h-14 text-lg font-semibold"
+            disabled={isSubmitting}
           >
-            SUBMIT REQUEST
+            {isSubmitting ? "SENDING..." : "SUBMIT REQUEST"}
           </Button>
         </form>
       </div>
